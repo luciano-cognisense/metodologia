@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Metodologia de Prática com Laboratórios Digitais</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link id="tab-stylesheet" rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Metodologia de Aprendizagem Prática em Laboratórios Digitais</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="tab1" onclick="showTab('objetivos')">Objetivos de Aprendizagem</a></li>
+                    <li><a href="#" id="tab2" onclick="showTab('dinamica')">Dinâmica de Aprendizagem</a></li>
+                    <li><a href="#" id="tab3" onclick="showTab('aplicacao')">Aplicação Pedagógica</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="content">
+                <!-- Conteúdo será carregado via JavaScript -->
+            </section>
+        </main>
+    </div>
+
+    <script src="js/objetivosAprendizagem.js"></script>
+    <script src="js/dinamicaAprendizagem.js"></script>
+    <script src="js/aplicacaoPedagogica.js"></script>
+    <script>
+        // Função para mostrar a aba correspondente
+        function showTab(tabName) {
+            document.getElementById('content').innerHTML = '';
+            if (tabName === 'objetivos') {
+                carregarObjetivosAprendizagem();
+            } else if (tabName === 'dinamica') {
+                carregarDinamicaAprendizagem();
+            } else if (tabName === 'aplicacao') {
+                carregarAplicacaoPedagogica();
+            }
+        }
+
+        // Carregar a primeira aba por padrão
+        showTab('objetivos');
+    </script>
+</body>
+</html>

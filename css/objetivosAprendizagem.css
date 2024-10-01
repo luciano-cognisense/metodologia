@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box; /* Certifique-se de que o box-sizing está definido */
+}
+
+/* Estilos para a aba de Objetivos de Aprendizagem */
+.objetivos-header {
+    height: 40px;
+    width: 100%;
+    background-color: #1c5796;
+    color: white;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    border-radius: 8px 8px 0 0;
+    padding: 10px; /* Adiciona padding para evitar transbordamento */
+    margin-top: 10px;
+    box-sizing: border-box; /* Inclui padding no cálculo da largura total */
+}
+
+.objetivos-header h2 {
+    font-size: 1.6rem; /* Ajuste o tamanho da fonte, se necessário */
+    color: white;
+    margin: 0; /* Remove margens do título */
+    line-height: 1.2; /* Define a altura da linha para um espaçamento adequado */
+}
+
+.objetivos-content {
+    display: flex;
+    height: 90%;
+    width: 100%;
+    gap: 10px;
+}
+
+.coluna-geral,
+.coluna-capacidades,
+.coluna-praticas {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Adiciona o display flex para centralização */
+    flex-direction: column; /* Alinha itens na coluna */
+}
+
+.coluna-geral {
+    width: 25%;
+}
+
+.coluna-capacidades {
+    width: 25%;
+}
+
+.coluna-praticas {
+    width: 50%;
+}
+
+h3 {
+    color: #ffffff;
+    /*margin-bottom: 15px;*/
+    font-size: 1.5rem;
+}
+
+/* Para responsividade em telas menores */
+@media (max-width: 768px) {
+    .objetivos-content {
+        flex-direction: column;
+    }
+    
+    .coluna-geral,
+    .coluna-capacidades,
+    .coluna-praticas {
+        width: 100%;
+    }
+}
+
+.campo-texto {
+    margin-top: 5px; /* Adiciona uma margem inferior entre os campos de texto */
+    display: flex; /* Mantém os botões ao lado do campo de texto */
+    align-items: center; /* Alinhamento vertical */
+    flex-wrap: wrap; /* Permite que os botões se movam para baixo se necessário */
+}
+
+.campo-texto input[type="text"] {
+    flex: 1; /* Permite que o campo de texto ocupe todo o espaço disponível */
+    padding: 10px; /* Adiciona padding para um espaço interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-right: 5px; /* Adiciona margem à direita para espaçamento */
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+}
+
+.add-button, .remove-button {
+    width: 18px; /* Tamanho fixo do botão */
+    height: 18px; /* Tamanho fixo do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 50%; /* Botões redondos */
+    color: white; /* Cor do texto */
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte dos botões */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    display: flex; /* Usa flexbox para centralizar o texto dentro do botão */
+    align-items: center; /* Centraliza verticalmente o texto */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    margin-bottom: 5px;
+    margin-top: 2px;
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+.add-button {
+    background-color: #4CAF50; /* Verde para o botão de adicionar */
+}
+
+.remove-button {
+    background-color: #f44336; /* Vermelho para o botão de remover */
+}
+
+.remove-button[disabled] {
+    background-color: gray; /* Cinza quando desabilitado */
+    cursor: not-allowed; /* Cursor diferente quando desabilitado */
+}
+
+/* Para responsividade em telas menores */
+@media (max-width: 768px) {
+    .campo-texto {
+        flex-direction: row; /* Mantém a linha, mas pode mudar se o espaço for muito pequeno */
+        align-items: center; /* Mantém o alinhamento */
+    }
+    
+    .campo-texto input[type="text"] {
+        width: 100%; /* Campo de texto ocupa 100% da largura */
+        margin-bottom: 5px; /* Margem inferior para espaçamento */
+    }
+
+    .add-button, .remove-button {
+        width: 10px; /* Aumenta o tamanho do botão em telas menores */
+        height: 10px; /* Aumenta o tamanho do botão em telas menores */
+    }
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #333; /* Cor do ícone */
+}
+
+.file-upload {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    color: #333; /* Cor do ícone */
+}
+
+.fas:hover {
+    color: #007BFF;
+}
